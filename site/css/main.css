@@ -1,0 +1,71 @@
+body,h1,h2,h3{
+    margin: 0;
+}
+
+.welcome{
+  background-image: url("/site/img/balloons.jpg");
+  height: 667px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+main{
+    height: 700px;
+    background-color: rgb(167, 58, 67);
+}
+
+.text{
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    font-size: 4rem;  
+}
+
+h1,h2,.swipe{  
+    font-family: 'Rokkitt', serif;
+}
+
+h3{
+    font-family: 'Cedarville Cursive', cursive;
+    position: relative;
+    top: -10px;
+}
+
+.swipe{
+    position: relative;
+    top: 220px;
+    color: white;
+    font-size: 25px;
+    animation:blinkingText 1.5s infinite;
+}
+
+@keyframes blinkingText{
+    0%{     color: rgb(255, 255, 255);    }
+    50%{    color: transparent; }
+    100%{   color: rgb(255, 255, 255);    }
+}
+
+.infobox{
+    display: flex;
+    flex-direction: row;
+}
+
+#hexagon{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
