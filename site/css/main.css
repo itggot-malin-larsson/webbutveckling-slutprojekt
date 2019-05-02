@@ -2,22 +2,30 @@ body,h1,h2,h3{
     margin: 0;
 }
 
+
 .welcome{
-  background-image: url("/site/img/balloons.jpg");
-  height: 667px; 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
+    height: 100vh; 
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-image: url("/site/img/balloons.jpg");  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
 }
 
-main{
-    height: 700px;
-    background-color: rgb(167, 58, 67);
+.about{
+    height: 100vh;
+    background-color: rgb(41,69,93);
 }
 
 .text{
@@ -56,14 +64,30 @@ h3{
     100%{   color: rgb(255, 255, 255);    }
 }
 
-.infobox{
+/* .infobox{
     display: flex;
     flex-direction: row;
+} */
+
+.start{
+    height: 100vh;
+    background-color: rgb(167,58,67);
 }
 
 #hexagon{
     display: flex;
-    justify-content: center;
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    left: 10px;
+}
+
+#quote{
+    color: white;
+    position: relative;
+    top: 100px;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 27px;
 }
 
 
