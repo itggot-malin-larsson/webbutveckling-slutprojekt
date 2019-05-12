@@ -9,3 +9,8 @@ function menu(event){
     let menu= document.querySelector(".menu")
     menu.classList.toggle("activatemenu")
 }
+
+function matches(event){
+    let matches= document.querySelector(".matchprofile")
+    matches.classList.toggle("nextmatch")
+}
