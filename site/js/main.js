@@ -14,3 +14,8 @@ function matches(event){
     let matches= document.querySelector(".matchprofile")
     matches.classList.toggle("nextmatch")
 }
+
+function liked(event){
+    let like= document.querySelector("#hearticon")
+    like.classList.toggle("liked")
+}
