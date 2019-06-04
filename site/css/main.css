@@ -1,4 +1,4 @@
-body,h1,h2,h3{
+body,h1,p,h3{
     margin: 0;
 }
 
@@ -33,7 +33,7 @@ nav{
 }
 
 
-.about h2, .start h2, .profile h2{
+.about p, .start p, .profile p{
     margin: 0 20px 0 20px;
     
 }
@@ -55,7 +55,7 @@ nav{
     top: 25px;
 }
 
-.text{
+article{
     color: white;
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ h1{
     color: white; 
 }
 
-h1,h2,.swipe,ul{  
+h1,p,.swipe,ul{  
     font-family: 'Rokkitt', serif;
 }
 
@@ -80,7 +80,7 @@ h3{
 
 .swipe{
     position: relative;
-    top: 220px;
+    bottom: -200px;
     color: white;
     font-size: 25px;
     animation:blinkingText 1.5s infinite;
@@ -129,7 +129,7 @@ main{
     z-index: 10;
 }
 
-.profile{
+#profile{
     background-color: rgb(254, 100, 92);
 }
 
@@ -168,8 +168,8 @@ a{
 
 
 
-.contacts{
-    height: 35vh;
+footer{
+
     background-color: rgb(253,171,97);
     display: flex;
     align-items: center;
@@ -182,34 +182,22 @@ a{
     width: 100px;
 }
 
-.contacts h3{
+footer h3{
     position: relative;
     top: 65px;
 }
 
-.contacts h3, .contacts .links{
+footer h3, footer .links{
     color: rgb(220, 128, 44);
 }
 
-.about .text{
-    color: rgb(49, 90, 126);
+.about article, .start article, .profile article, .chat article{
+    color: rgba(255,255,255,0.25);
 }
 
-.about h2{
+.about p{
     font-size: 1.3rem;
     padding: 15px;
-}
-
-.start .text, .start .button{
-    color: rgb(222,119,127);
-}
-
-.profile .text{
-    color: rgb(237, 78, 71);
-}
-
-.chat .text{
-    color: rgb(236, 122, 57);
 }
 
 .button{
@@ -224,21 +212,20 @@ a{
     -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.3);
     margin: 40px 0 60px 0;
+    cursor: pointer;
 }
 
-.matching{
-    height: 100vh;
+section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 20px 0 20px;
 }
 
 .matchingWrapper{
     background-color: rgb(167,58,67);
     display: grid;
-    grid-template-columns: 100vw 100vw 100vw;
-    grid-template-rows: 100vh;
+    grid-template-rows: 12vh 68vh 20vh;
+
 }
 
 .profilepic{
@@ -263,10 +250,13 @@ a{
 }
 
 .matchingbuttons{
+    height: 20vh;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     color: white;
+    background-color: rgb(254, 100, 92);
 }
 
 .nextmatch{
@@ -284,7 +274,7 @@ a{
     margin-top: 10px;
 }
 
-.matches h2{
+.matches p{
     grid-area: description;
     font-size: 1.4rem;
 }
@@ -302,6 +292,26 @@ a{
 .liked{
     background: url(/site/img/hearticonred.png);
 }
+
+
+.button p{
+    color: black;
+}
+
+header{
+   background-color: rgb(254, 100, 92); 
+   display: flex;
+   align-items: center;
+}
+
+#back{
+    margin: -5px 0 0 5px;
+}
+
+
+
+
+
 
 @media only screen and (min-device-width: 700px){
 
@@ -403,7 +413,7 @@ a{
         grid-template-areas:
         "about startmatching"
         "profile chat";
-        background: url(/site/img/main1155x768.png);
+        background: url(/site/img/main1166x935.svg);
         background-position: center;
         background-size: cover;
         z-index: 1;
@@ -414,7 +424,7 @@ a{
         width: 0;
     }
 
-    .wrapper h2, .start .button h2{
+    .wrapper p, .start .button p{
         font-size: 1.5rem;
     }
 
@@ -425,7 +435,7 @@ a{
         background-size: cover;
     }
 
-    main .text{
+    main article{
         margin: 0 70px 0 70px;
     }
 
@@ -433,20 +443,23 @@ a{
         margin: 50px 0 35px 0;
     }
 
-    .start h2{
+    .start p{
         font-size: 1rem;
     }
 
-    .profile h2{
+    .profile p{
         margin: 13px;
     }
 
-    .color .text{
+    .color article{
         visibility: visible;
     }
 
-    .button{
-        cursor: pointer;
+    .button:hover{
+        position: relative;
+        top: -5px;
     }
+
+
     
 }

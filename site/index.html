@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/site/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
     <title>Monster's Fling</title>
@@ -14,12 +14,12 @@ onscroll="parallax()">
     <div class="wrapper">
         <div class="welcome">
             <div class="bg"></div>
-            <div class="text">
+            <article>
                 <h1>Welcome</h1>
                 <h3>to</h3>
-                <h2>Monster's fling</h2>
-            </div>
-            <h2 id="quote" >Find your stranger half today</h2>
+                <p>Monster's fling</p>
+            </article>
+            <p id="quote" >Find your stranger half today</p>
             <div class="swipe">
                 <h4>Swipe</h4>
             </div>
@@ -27,10 +27,7 @@ onscroll="parallax()">
         
         <nav>
             <ul>
-                <a href="#about">
-                    <li>About</li>
-                </a>
-                <a href="/matching.html">
+                <a href="matching.html">
                     <li>Matching</li>
                 </a>
                 <li>Profile</li>
@@ -42,14 +39,14 @@ onscroll="parallax()">
         </nav>
         
         <main>
-            <img class="hexagon" src="/site/img/hexagonbutton.png" id="menuhexagon" onclick="menu()" alt="">
+            <img class="hexagon" src="img/hexagonbutton.png" id="menuhexagon" onclick="menu()" alt="">
             <div class="menu">
-                    <img class="hexagon" src="/site/img/hexagonbutton.png" onclick="menu()" alt="">
+                    <img class="hexagon" src="img/hexagonbutton.png" onclick="menu()" alt="">
                 <ul onclick="menu()">
                     <a href="#about">
                         <li>About</li>
                     </a>
-                    <a href="/matching.html">
+                    <a href="matching.html">
                         <li>Matching</li>
                     </a>
                     <li>Profile</li>
@@ -62,57 +59,55 @@ onscroll="parallax()">
         
             
 
-            <div class="about" id="about">
-                <div class="text">
+            <section class="about">
+                <article>
                     <div class="title">What is Monster's Fling?</div>
-                    <h2>Monster's Fling is for lonely souls who want to find their stranger half. Our site wants to show that everybody deserves love, no matter if you have horns, scales, fur or pointy teeth. 
-                    </h2>
-                </div>
-            </div>
+                    <p>Monster's Fling is for lonely souls who want to find their stranger half. Our site wants to show that everybody deserves love, no matter if you have horns, scales, fur or pointy teeth. 
+                    </p>
+                </article>
+            </section>
 
-            <div class="start">
-                <div class="text">
+            <section class="start">
+                <article>
                     <div class="title">Let's start matching</div>
-                    <h2>What are you waiting for? Let's find some matches! Click the bottom below to start. You are going to see a picture and a description of different monsters. If you like someone, click the heart symbol.</h2>
+                    <p>What are you waiting for? Let's find some matches! Click the bottom below to start. You are going to see a picture and a description of different monsters. If you like someone, click the heart symbol.</p>
                     <div class="icon"></div>
-                    <h2> If not, continue to the next monster by pressing the right arrow. You can Always go back and like someone you skipped earlier.</h2>
-                    <a href="/matching.html">
-                        <div class="button">
-                        <h2>Start!</h2>
-                        </div>
+                    <p> If not, continue to the next monster by pressing the right arrow. You can Always go back and like someone you skipped earlier.</p>
+                    <a href="matching.html" class="button">
+                        <p>Start!</p>
                     </a>
-                </div>
-            </div>
+                </article>
+            </section>
 
-            <div class="profile">
-                <div class="text">
+            <section class="profile">
+                <article>
                     <div class="title">Profile</div>
-                    <h2>To find your match, your first need a profile. If you do not already have an account or you want to edit your profile, click the button below.</h2>
-                <div class="button">
-                    <h2>Go to profile</h2>
-                </div>
-                </div>
-            </div>
+                    <p>To find your match, your first need a profile. If you do not already have an account or you want to edit your profile, click the button below.</p>
+                    <a class="button">
+                        <p>Go to profile</p>
+                    </a>
+                </article>
+            </section>
 
-            <div class="chat">
+            <section class="chat">
                 <div class="color">
-                    <div class="text">
+                    <article>
                         <div class="title">Chat</div>
-                        <h2>Already matched with an interesting creature? Click the bottom below to chat with monsters you have matched with. Chatting is a great way to get to know eachother and maybe plan a date.</h2>
-                        <div class="button">
-                            <h2>Go to chats</h2>
-                        </div>
-                    </div>
+                        <p>Already matched with an interesting creature? Click the bottom below to chat with monsters you have matched with. Chatting is a great way to get to know eachother and maybe plan a date.</p>
+                        <a class="button">
+                            <p>Go to chats</p>
+                        </a>
+                    </article>
                 </div>
-            </div>
+            </section>
 
-            <div class="contacts" id="contacts">
+            <footer class="contacts" id="contacts">
                 <div class="icon"></div>
                 
-                <div class="links">Facebook | Instagram | Twitter</div>
+                <a class="links">Facebook | Instagram | Twitter</a>
 
                 <h3>Design by Malin Larsson</h3>
-            </div>
+            </footer>
 
         </main>
     </div>
