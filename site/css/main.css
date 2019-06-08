@@ -2,7 +2,6 @@ body,h1,p,h3{
     margin: 0;
 }
 
-
 .welcome{
     height: 100vh; 
     align-items: center;
@@ -86,10 +85,14 @@ h3{
     animation:blinkingText 1.5s infinite;
 }
 
+.contacts{
+    height: 35vh;
+}
+
 @keyframes blinkingText{
-    0%{     color: rgb(255, 255, 255);    }
-    50%{    color: transparent; }
-    100%{   color: rgb(255, 255, 255);    }
+    0%{     color: rgb(255, 255, 255);}
+    50%{    color: transparent;}
+    100%{   color: rgb(255, 255, 255);}
 }
 
 main{
@@ -129,10 +132,6 @@ main{
     z-index: 10;
 }
 
-#profile{
-    background-color: rgb(254, 100, 92);
-}
-
 .color{
     background-color: rgb(251, 143, 81);
 }
@@ -157,8 +156,6 @@ a{
     text-decoration: none;
 }
 
-
-
 .activatemenu{
     left: 0;
     transition-timing-function: ease-in;
@@ -169,7 +166,6 @@ a{
 
 
 footer{
-
     background-color: rgb(253,171,97);
     display: flex;
     align-items: center;
@@ -191,7 +187,7 @@ footer h3, footer .links{
     color: rgb(220, 128, 44);
 }
 
-.about article, .start article, .profile article, .chat article{
+.about article, .start article, .profile article, .chat article, .match article{
     color: rgba(255,255,255,0.25);
 }
 
@@ -222,72 +218,100 @@ section{
 }
 
 .matchingWrapper{
-    background-color: rgb(167,58,67);
-    display: grid;
-    grid-template-rows: 12vh 68vh 20vh;
-
+    background-color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .profilepic{
-    grid-area: picture;
     height: 280px;
     width: 280px;
     background-repeat: no-repeat;
-    margin: 10px 0 20px 0;
+    margin: 10px 0 0 0;
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
     border-color: white;
 }
 
+.profilepic:nth-child(1){
+    background: url(/site/img/Martin280x280.jpg);
+}
+
+.profilepic:nth-child(2){
+    background: url(/site/img/Linnea280x280.jpg);
+}
 
 
-.matchingWrapper .icon{
-    margin: 0 40px;
-    background-position: center;
-    background-size: cover;
-    height: 80px;
-    width: 80px;
+.match .title{
+    margin: 10px 0 0 0;
+}
+
+.match p{
+    margin: 0 15px 0 15px;
+}
+
+header{
+   background-color: black; 
+   display: flex;
+   align-items: center;
+   height: 12vh;
+}
+
+.matching{
+    display: grid;
+    height: 73vh;
+    width: 100vw;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "matches";
+
 }
 
 .matchingbuttons{
-    height: 20vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     color: white;
+    background-color: black;
+    margin-left: 22vw;
+    height: 15vh;
+}
+
+.match{
+    height: 73vh;
+    width: 100vw;
+    grid-area: matches;
+}
+
+.match:nth-of-type(5n+1){
+    background-color: rgb(32,61,87);
+}
+
+.match:nth-of-type(5n+2){
+    background-color: rgb(167,58,67);
+}
+
+.match:nth-of-type(5n+3){
     background-color: rgb(254, 100, 92);
 }
 
-.nextmatch{
-    transition-timing-function: ease-in;
-    transition-duration: 0.3s;
-    left: -100vw;
+.match:nth-of-type(5n+4){
+    background-color: rgb(251, 143, 81);
 }
 
-.matches{
-    background-color: rgb(254, 100, 92, 0.2);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
-    margin-top: 10px;
+.match:nth-of-type(5n+5){
+    background-color: rgb(253,171,97);
 }
 
-.matches p{
-    grid-area: description;
-    font-size: 1.4rem;
+.match:nth-child(1){
+    height: 73vh;
+    width: 100vw;
+    z-index: 1;
 }
 
-.matchprofile{
-    display: grid;
-    margin: 0 100px 0 0;
-    grid-template-rows: 50vh 26vh;
-    grid-template-areas:
-    "picture"
-    "description";
+.match:nth-child(2){
+    z-index: 4;
 }
-
 
 .liked{
     background: url(/site/img/hearticonred.png);
@@ -298,15 +322,19 @@ section{
     color: black;
 }
 
-header{
-   background-color: rgb(254, 100, 92); 
-   display: flex;
-   align-items: center;
-}
-
 #back{
     margin: -5px 0 0 5px;
 }
+
+.text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
 
 
 
@@ -332,8 +360,7 @@ header{
         "contacts";
     }
 
-    
-    
+
     .welcome{
         grid-area: header;
         height: 100%;
@@ -460,6 +487,28 @@ header{
         top: -5px;
     }
 
+    .matchingbuttons{
+        margin-left: 42vw;
+    }
+
+    .profile{
+        display: grid;
+        grid-template-columns: 40vw 60vh;
+        grid-template-areas:  
+        "picture description";
+    }
+
+    .profilepic{
+        grid-area: picture;
+        margin: 13vh 20vw 0 0;
+    }
+
+    .text{
+        grid-area: description;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
     
 }

@@ -10,9 +10,14 @@ function menu(event){
     menu.classList.toggle("activatemenu")
 }
 
-function matches(event){
-    let matches= document.querySelector(".matchprofile")
-    matches.classList.toggle("nextmatch")
+function next(event){
+    let matches= document.querySelector(".match:nth-child(2)")
+    matches.style.visibility='visible' 
+}
+
+function previous(event){
+    let matches=document.querySelector(".match:nth-child(2)")
+    matches.style.visibility='hidden'
 }
 
 function liked(event){

@@ -8,7 +8,7 @@
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.min.css">
     <title>Monster's Fling</title>
 </head>
 <body>
@@ -21,73 +21,36 @@
         </header>
 
         <section class="matching">
-            här är profilen
+            <div class="match">
+                <article class="profile">
+                    <div class="profilepic"></div>
+                    <div class="text">
+                        <div class="title">Martin</div>
+                        <h3>18</h3>
+                        <p>Super hot dude, famous and got that money rolling</p>
+                </div>
+                </article>
+            </div>
+
+            <div class="match">
+                <article class="profile">
+                    <div class="profilepic"></div>
+                    <div class="text">
+                        <div class="title">Linnea</div>
+                        <h3>18</h3>
+                        <p>Master of duckface, my favorite food is bread, interests including swimming and running after people in the park.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <footer class="matchingbuttons">
-                <i class="material-icons" style="font-size: 8vh" >arrow_back_ios</i>
+                <i class="material-icons" style="font-size: 8vh" onclick="previous()">arrow_back_ios</i>
                 <div class="icon" id="hearticon" onclick="liked()"></div>
-                <i class="material-icons" style="font-size: 8vh" onclick="matches()">arrow_forward_ios</i>
+                <i class="material-icons" style="font-size: 8vh" onclick="next()">arrow_forward_ios</i>
         </footer>
-        <!-- <div class="menu">
-            <img class="hexagon" src="" onclick="menu()" alt="">
-            <ul onclick="menu()">
-                <a href="index.html#about">
-                    <li>About</li>
-                </a>
-                <a href="matching.html">
-                    <li>Matching</li>
-                </a>
-                <li>Profile</li>
-                <li>Chat</li>
-                <a href="index.html#contacts">
-                    <li>Contacts</li>
-                </a>
-            </ul>
-        </div> -->
 
-        <!-- <section id="matching">
-            <img class="hexagon" src="img/hexagonbutton.png" onclick="menu()" alt="">
-                <div class="matches">  
-                    <div class="matchprofile">
-                        <img class="profilepic" src="img/Martin280x280.jpg" alt="">
-                        <div class="text">
-                            <div class="name">
-                                <p>Martin</p>
-                            </div>
-                            <div class="age">
-                                <p>18</p>
-                            </div>
-                            <div class="description">
-                                <p>Super hot dude, famous and got that money rolling</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="matchprofile">
-                        <img class="profilepic" src="img/Linnea280x280.jpg" alt="">
-                        <div class="text">
-                            <div class="name">
-                                <p>Linnea</p>
-                            </div>
-                            <div class="age">
-                                <p>18</p>
-                            </div>
-                            <div class="description">
-                                <p>Master of duckface, my favorite food is bread, interests including swimming and running after people in the park.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <footer class="matchingbuttons">
-                    <i class="material-icons" style="font-size: 8vh" >arrow_back_ios</i>
-                    <div class="icon" id="hearticon" onclick="liked()"></div>
-                    <i class="material-icons" style="font-size: 8vh" onclick="matches()">arrow_forward_ios</i>
-                </footer>
-        </section> -->
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
